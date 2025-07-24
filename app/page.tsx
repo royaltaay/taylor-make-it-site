@@ -7,9 +7,9 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 px-8 py-6">
-        <nav className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="text-xl font-medium">Taylor— make it!</div>
-          <div className="flex items-center gap-4">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between md:justify-between">
+          <div className="text-xl font-medium mx-auto md:mx-0">Taylor— make it!</div>
+          <div className="hidden md:flex items-center gap-4">
             <button className="text-xl font-medium hover:opacity-70 transition-opacity">
               Contact
             </button>
@@ -24,7 +24,7 @@ export default function Home() {
       <section className="pt-28 pb-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2rem] overflow-hidden px-16 py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200">
-            <h1 className="text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight">
+            <h1 className="text-[4.5rem] md:text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight">
               Custom<br />
               websites
             </h1>
@@ -33,9 +33,13 @@ export default function Home() {
               businesses and entrepreneurs shine online.
             </p>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-11 h-11 bg-gray-400 rounded-full overflow-hidden">
-                {/* Profile image placeholder */}
-              </div>
+              <Image
+                src="/images/profile pic.png.webp"
+                alt="Taylor Prince"
+                width={44}
+                height={44}
+                className="rounded-full"
+              />
               <button className="text-xl font-medium hover:opacity-70 transition-opacity px-1">
                 Contact
               </button>
@@ -57,41 +61,73 @@ export default function Home() {
             Every site is built from scratch for speed and style.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
-              <div className="w-32 h-32 bg-gray-100 rounded-2xl mb-8 border border-gray-200"></div>
-              <h3 className="text-2xl font-medium mb-3">Custom design</h3>
-              <p className="text-gray-600 text-xl leading-relaxed">
-                Visually stunning, responsive
-                designs tailored to your brand.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="border border-[#D5D5D5] rounded-2xl p-8 bg-white flex flex-col h-[450px]">
+              <div className="h-[200px] flex items-center justify-center mb-8">
+                <Image
+                  src="/images/custom design.png.webp"
+                  alt="Custom design"
+                  width={180}
+                  height={180}
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-medium mb-3">Custom design</h3>
+                <p className="text-gray-600 text-xl leading-relaxed">
+                  Visually stunning, responsive
+                  designs tailored to your brand.
+                </p>
+              </div>
             </div>
-            <div>
-              <div className="w-32 h-32 bg-gray-100 rounded-2xl mb-8 border border-gray-200"></div>
-              <h3 className="text-2xl font-medium mb-3">Fast Delivery</h3>
-              <p className="text-gray-600 text-xl leading-relaxed">
-                Receive your project in as little
-                as 1 week.
-              </p>
+            <div className="border border-[#D5D5D5] rounded-2xl p-8 bg-white flex flex-col h-[450px]">
+              <div className="h-[200px] flex items-center justify-center mb-8">
+                <Image
+                  src="/images/fast delivery.png.webp"
+                  alt="Fast Delivery"
+                  width={180}
+                  height={180}
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-medium mb-3">Fast Delivery</h3>
+                <p className="text-gray-600 text-xl leading-relaxed">
+                  Receive your project in as little
+                  as 1 week.
+                </p>
+              </div>
             </div>
-            <div>
-              <div className="w-32 h-32 bg-gray-100 rounded-2xl mb-8 border border-gray-200"></div>
-              <h3 className="text-2xl font-medium mb-3">Premium Quality</h3>
-              <p className="text-gray-600 text-xl leading-relaxed">
-                Expert-level design and
-                development on each project.
-              </p>
+            <div className="border border-[#D5D5D5] rounded-2xl p-8 bg-white flex flex-col h-[450px]">
+              <div className="h-[200px] flex items-center justify-center mb-8">
+                <Image
+                  src="/images/premium quality.png.webp"
+                  alt="Premium Quality"
+                  width={180}
+                  height={180}
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-medium mb-3">Premium Quality</h3>
+                <p className="text-gray-600 text-xl leading-relaxed">
+                  Expert-level design and
+                  development on each project.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-20 rounded-2xl p-12 text-center">
-            <p className="text-gray-600 max-w-2xl mx-auto text-xl">
-              Taylor Prince has worked in the creative industry for
-              over 10 years, crafting unique experiences, premium
-              designs, and developing professional quality websites
-              that have helped businesses shine.
-            </p>
-          </div>
+      {/* About Section */}
+      <section className="py-20 px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-gray-600 text-xl leading-relaxed">
+            Taylor Prince has worked in the creative industry for over 10 years,
+            crafting unique experiences, premium designs, and developing
+            professional quality websites that have helped businesses shine.
+          </p>
         </div>
       </section>
 
@@ -100,7 +136,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left card with image placeholder */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-8">
+            <div className="bg-white rounded-2xl border border-[#D5D5D5] p-8">
               <div className="bg-gray-100 rounded-xl h-80 mb-8"></div>
               <h2 className="text-3xl font-normal mb-3">Recent projects</h2>
               <p className="text-gray-600 text-xl mb-6">
@@ -113,7 +149,7 @@ export default function Home() {
             </div>
 
             {/* Right card with list */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center flex flex-col justify-center min-h-[500px]">
+            <div className="bg-white rounded-2xl border border-[#D5D5D5] p-8 text-center flex flex-col justify-center min-h-[500px]">
               <div>
                 <div className="space-y-4 text-xl text-gray-700 mb-16">
                   <p>Responsive Websites</p>
@@ -145,7 +181,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Starter Site Card */}
-            <Card className="p-8 border-gray-200">
+            <Card className="p-8 border-[#D5D5D5]">
               <h3 className="text-xl font-medium mb-2">Starter site</h3>
               <div className="text-4xl font-normal mb-6">$3,500</div>
               <ul className="space-y-3 text-xl text-gray-600 mb-8">
@@ -158,7 +194,7 @@ export default function Home() {
                 <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium">
                   Checkout →
                 </Button>
-                <Button variant="outline" className="rounded-lg px-6 py-3 text-xl font-medium border-gray-300">
+                <Button variant="outline" className="rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5]">
                   Contact me
                 </Button>
               </div>
@@ -178,7 +214,7 @@ export default function Home() {
                 <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium">
                   Checkout →
                 </Button>
-                <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-gray-300">
+                <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5]">
                   Contact me
                 </Button>
               </div>
@@ -198,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-8 border-t border-gray-200">
+      <footer className="py-12 px-8 border-t border-[#D5D5D5]">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="text-xl font-medium">Taylor— make it!</div>
           <p className="text-xl text-gray-500">
