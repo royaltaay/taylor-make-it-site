@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { FeatureCards } from "@/components/feature-cards";
+import { ServicesCard } from "@/components/services-card";
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
             <button className="text-xl font-medium hover:opacity-70 transition-opacity">
               Contact
             </button>
-            <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-4 py-3 text-xl font-medium">
+            <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-4 py-3 text-xl font-medium h-auto">
               See pricing
             </Button>
           </div>
@@ -23,7 +25,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-28 pb-16 px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[2rem] overflow-hidden px-16 py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200">
+          <div className="relative rounded-[2rem] overflow-hidden px-16 py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200 animate-gradient">
             <h1 className="text-[4.5rem] md:text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight">
               Custom<br />
               websites
@@ -36,8 +38,8 @@ export default function Home() {
               <Image
                 src="/images/profile pic.png.webp"
                 alt="Taylor Prince"
-                width={44}
-                height={44}
+                width={55}
+                height={55}
                 className="rounded-full"
               />
               <button className="text-xl font-medium hover:opacity-70 transition-opacity px-1">
@@ -61,62 +63,7 @@ export default function Home() {
             Every site is built from scratch for speed and style.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border border-[#D5D5D5] rounded-2xl p-8 bg-white flex flex-col h-[450px]">
-              <div className="h-[200px] flex items-center justify-center mb-8">
-                <Image
-                  src="/images/custom design.png.webp"
-                  alt="Custom design"
-                  width={180}
-                  height={180}
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-medium mb-3">Custom design</h3>
-                <p className="text-gray-600 text-xl leading-relaxed">
-                  Visually stunning, responsive
-                  designs tailored to your brand.
-                </p>
-              </div>
-            </div>
-            <div className="border border-[#D5D5D5] rounded-2xl p-8 bg-white flex flex-col h-[450px]">
-              <div className="h-[200px] flex items-center justify-center mb-8">
-                <Image
-                  src="/images/fast delivery.png.webp"
-                  alt="Fast Delivery"
-                  width={180}
-                  height={180}
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-medium mb-3">Fast Delivery</h3>
-                <p className="text-gray-600 text-xl leading-relaxed">
-                  Receive your project in as little
-                  as 1 week.
-                </p>
-              </div>
-            </div>
-            <div className="border border-[#D5D5D5] rounded-2xl p-8 bg-white flex flex-col h-[450px]">
-              <div className="h-[200px] flex items-center justify-center mb-8">
-                <Image
-                  src="/images/premium quality.png.webp"
-                  alt="Premium Quality"
-                  width={180}
-                  height={180}
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-medium mb-3">Premium Quality</h3>
-                <p className="text-gray-600 text-xl leading-relaxed">
-                  Expert-level design and
-                  development on each project.
-                </p>
-              </div>
-            </div>
-          </div>
+          <FeatureCards />
         </div>
       </section>
 
@@ -143,32 +90,13 @@ export default function Home() {
                 My custom-coded websites drive results. Each
                 is built to fit your needs, ready in 1-3 weeks.
               </p>
-              <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3.5 text-xl font-medium">
+              <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
                 See recent projects
               </Button>
             </div>
 
             {/* Right card with list */}
-            <div className="bg-white rounded-2xl border border-[#D5D5D5] p-8 text-center flex flex-col justify-center min-h-[500px]">
-              <div>
-                <div className="space-y-4 text-xl text-gray-700 mb-16">
-                  <p>Responsive Websites</p>
-                  <p>E-Commerce Stores</p>
-                  <p>Booking Systems</p>
-                  <p>SEO Optimization</p>
-                  <p>Content Management</p>
-                  <p>Social Media Integration</p>
-                </div>
-
-                <div>
-                  <h3 className="text-3xl font-normal mb-3">Everything you need</h3>
-                  <p className="text-gray-600 text-xl">
-                    Powerful features, endless
-                    customization.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <ServicesCard />
           </div>
         </div>
       </section>
@@ -191,17 +119,17 @@ export default function Home() {
                 <li>• 2 rounds of revisions</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium">
+                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
                   Checkout →
                 </Button>
-                <Button variant="outline" className="rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5]">
+                <Button variant="outline" className="rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5] h-auto">
                   Contact me
                 </Button>
               </div>
             </Card>
 
             {/* Advanced Site Card */}
-            <Card className="p-8 border-0 bg-gradient-to-br from-orange-100 via-purple-100 to-cyan-100">
+            <Card className="p-8 border-0 bg-gradient-to-br from-orange-100 via-purple-100 to-cyan-100 animate-gradient">
               <h3 className="text-xl font-medium mb-2">Advanced site</h3>
               <div className="text-4xl font-normal mb-6">$7,500</div>
               <ul className="space-y-3 text-xl text-gray-700 mb-8">
@@ -211,10 +139,10 @@ export default function Home() {
                 <li>• 4 rounds of revisions</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium">
+                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
                   Checkout →
                 </Button>
-                <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5]">
+                <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5] h-auto">
                   Contact me
                 </Button>
               </div>
