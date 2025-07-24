@@ -1,102 +1,210 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 px-8 py-6">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="text-xl font-medium">Taylor— make it!</div>
+          <div className="flex items-center gap-4">
+            <button className="text-xl font-medium hover:opacity-70 transition-opacity">
+              Contact
+            </button>
+            <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-4 py-3 text-xl font-medium">
+              See pricing
+            </Button>
+          </div>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <section className="pt-28 pb-16 px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative rounded-[2rem] overflow-hidden px-16 py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200">
+            <h1 className="text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight">
+              Custom<br />
+              websites
+            </h1>
+            <p className="text-xl text-gray-800 mb-12 max-w-xl mx-auto leading-relaxed">
+              Professional web design and development to help small
+              businesses and entrepreneurs shine online.
+            </p>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-11 h-11 bg-gray-400 rounded-full overflow-hidden">
+                {/* Profile image placeholder */}
+              </div>
+              <button className="text-xl font-medium hover:opacity-70 transition-opacity px-1">
+                Contact
+              </button>
+              <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-5 py-3 text-xl font-medium h-auto">
+                See pricing
+              </Button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-5xl font-normal text-center mb-3">
+            Websites that work for you
+          </h2>
+          <p className="text-center text-gray-600 text-xl mb-20">
+            Every site is built from scratch for speed and style.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+              <div className="w-32 h-32 bg-gray-100 rounded-2xl mb-8 border border-gray-200"></div>
+              <h3 className="text-2xl font-medium mb-3">Custom design</h3>
+              <p className="text-gray-600 text-xl leading-relaxed">
+                Visually stunning, responsive
+                designs tailored to your brand.
+              </p>
+            </div>
+            <div>
+              <div className="w-32 h-32 bg-gray-100 rounded-2xl mb-8 border border-gray-200"></div>
+              <h3 className="text-2xl font-medium mb-3">Fast Delivery</h3>
+              <p className="text-gray-600 text-xl leading-relaxed">
+                Receive your project in as little
+                as 1 week.
+              </p>
+            </div>
+            <div>
+              <div className="w-32 h-32 bg-gray-100 rounded-2xl mb-8 border border-gray-200"></div>
+              <h3 className="text-2xl font-medium mb-3">Premium Quality</h3>
+              <p className="text-gray-600 text-xl leading-relaxed">
+                Expert-level design and
+                development on each project.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-20 rounded-2xl p-12 text-center">
+            <p className="text-gray-600 max-w-2xl mx-auto text-xl">
+              Taylor Prince has worked in the creative industry for
+              over 10 years, crafting unique experiences, premium
+              designs, and developing professional quality websites
+              that have helped businesses shine.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Projects Section */}
+      <section className="py-24 px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left card with image placeholder */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-8">
+              <div className="bg-gray-100 rounded-xl h-80 mb-8"></div>
+              <h2 className="text-3xl font-normal mb-3">Recent projects</h2>
+              <p className="text-gray-600 text-xl mb-6">
+                My custom-coded websites drive results. Each
+                is built to fit your needs, ready in 1-3 weeks.
+              </p>
+              <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3.5 text-xl font-medium">
+                See recent projects
+              </Button>
+            </div>
+
+            {/* Right card with list */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center flex flex-col justify-center min-h-[500px]">
+              <div>
+                <div className="space-y-4 text-xl text-gray-700 mb-16">
+                  <p>Responsive Websites</p>
+                  <p>E-Commerce Stores</p>
+                  <p>Booking Systems</p>
+                  <p>SEO Optimization</p>
+                  <p>Content Management</p>
+                  <p>Social Media Integration</p>
+                </div>
+
+                <div>
+                  <h3 className="text-3xl font-normal mb-3">Everything you need</h3>
+                  <p className="text-gray-600 text-xl">
+                    Powerful features, endless
+                    customization.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-5xl font-normal text-center mb-2">Simple Pricing,</h2>
+          <h2 className="text-5xl font-normal text-center mb-16">unlimited potential</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Starter Site Card */}
+            <Card className="p-8 border-gray-200">
+              <h3 className="text-xl font-medium mb-2">Starter site</h3>
+              <div className="text-4xl font-normal mb-6">$3,500</div>
+              <ul className="space-y-3 text-xl text-gray-600 mb-8">
+                <li>• 5-page custom-coded site</li>
+                <li>• Basic SEO optimization</li>
+                <li>• 1-2 week delivery</li>
+                <li>• 2 rounds of revisions</li>
+              </ul>
+              <div className="flex gap-3">
+                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium">
+                  Checkout →
+                </Button>
+                <Button variant="outline" className="rounded-lg px-6 py-3 text-xl font-medium border-gray-300">
+                  Contact me
+                </Button>
+              </div>
+            </Card>
+
+            {/* Advanced Site Card */}
+            <Card className="p-8 border-0 bg-gradient-to-br from-orange-100 via-purple-100 to-cyan-100">
+              <h3 className="text-xl font-medium mb-2">Advanced site</h3>
+              <div className="text-4xl font-normal mb-6">$7,500</div>
+              <ul className="space-y-3 text-xl text-gray-700 mb-8">
+                <li>• 8-12 pages</li>
+                <li>• Custom features and integrations</li>
+                <li>• 2-4 week delivery</li>
+                <li>• 4 rounds of revisions</li>
+              </ul>
+              <div className="flex gap-3">
+                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium">
+                  Checkout →
+                </Button>
+                <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-gray-300">
+                  Contact me
+                </Button>
+              </div>
+            </Card>
+          </div>
+
+          {/* Maintenance Plan */}
+          <div className="mt-12 max-w-md mx-auto text-center">
+            <h3 className="text-xl font-medium mb-2">Maintenance plan</h3>
+            <p className="text-xl text-gray-600 mb-2">
+              Monthly updates & support, SEO tweaks<br />
+              & backups, Priority response.
+            </p>
+            <div className="text-2xl font-normal">$200/mo</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-8 border-t border-gray-200">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <div className="text-xl font-medium">Taylor— make it!</div>
+          <p className="text-xl text-gray-500">
+            Made with love from the Pacific Northwest
+          </p>
+        </div>
       </footer>
     </div>
   );
