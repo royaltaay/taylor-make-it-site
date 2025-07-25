@@ -130,7 +130,7 @@ export default function Home() {
             </Card>
 
             {/* Advanced Site Card */}
-            <Card className="p-8 border-0 bg-gradient-to-br from-orange-100 via-purple-100 to-cyan-100 animate-gradient">
+            <Card className="p-8 border-0 bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200 animate-gradient">
               <h3 className="text-xl font-medium mb-2">Growth site</h3>
               <div className="text-4xl font-normal mb-6">$7,500+</div>
               <ul className="space-y-3 text-xl text-gray-700 mb-8">
@@ -138,7 +138,7 @@ export default function Home() {
                 <li>• Strategy session to define goals</li>
                 <li>• Custom features and integrations</li>
                 <li>• Enhanced SEO setup</li>
-                <li>• Priority support during build</li>
+                <li>• Content polish</li>
                 <li>• 2-4 week delivery</li>
                 <li>• 4 rounds of revisions</li>
               </ul>
