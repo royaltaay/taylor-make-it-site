@@ -12,7 +12,9 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 px-8 py-6">
         <nav className="max-w-7xl mx-auto flex items-center justify-between md:justify-between">
-          <div className="text-xl font-medium mx-auto md:mx-0">Taylor— make it!</div>
+          <h1 className="text-xl font-medium mx-auto md:mx-0">
+            <a href="/" className="hover:opacity-70 transition-opacity">Taylor Make It</a>
+          </h1>
           <div className="hidden md:flex items-center gap-4">
             <ContactModal>
               <button className="text-xl font-medium hover:opacity-70 transition-opacity">
@@ -32,17 +34,17 @@ export default function Home() {
       <section className="pt-28 pb-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2rem] overflow-hidden px-16 py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200 animate-gradient">
-            <h1 className="text-[4.5rem] md:text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight opacity-0 animate-fade-up">
+            <h2 className="text-[4.5rem] md:text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight opacity-0 animate-fade-up">
               Custom<br />
               websites
-            </h1>
+            </h2>
             <p className="text-xl text-gray-800 mb-12 max-w-xl mx-auto leading-relaxed opacity-0 animate-fade-up animation-delay-200">
               Helping small businesses and entrepreneurs shine online with custom design and development.
             </p>
             <div className="flex items-center justify-center gap-3">
               <Image
                 src="/images/profile pic.png.webp"
-                alt="Taylor Prince"
+                alt="Taylor Prince - Web Designer and Developer"
                 width={55}
                 height={55}
                 className="rounded-full"
@@ -96,7 +98,7 @@ export default function Home() {
               <div className="rounded-xl overflow-hidden mb-8">
                 <Image
                   src="/images/recentwork-3.webp"
-                  alt="Recent work showcase"
+                  alt="Recent website projects by Taylor Make It - Custom web design portfolio"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"

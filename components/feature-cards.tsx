@@ -7,6 +7,7 @@ interface FeatureCard {
   image: string;
   title: string;
   description: string;
+  altText: string;
 }
 
 const features: FeatureCard[] = [
@@ -14,16 +15,19 @@ const features: FeatureCard[] = [
     image: "/images/custom design.png.webp",
     title: "Custom design",
     description: "Visually stunning, responsive designs tailored to your brand.",
+    altText: "Custom website design icon - Tailored web solutions",
   },
   {
     image: "/images/fast delivery.png.webp",
     title: "Fast Delivery",
     description: "Receive your project in as little as 1 week.",
+    altText: "Fast website delivery icon - Quick turnaround times",
   },
   {
     image: "/images/premium quality.png.webp",
     title: "Premium Quality",
     description: "Expert-level design and development on each project.",
+    altText: "Premium quality web development icon - Professional standards",
   },
 ];
 
@@ -63,7 +67,7 @@ export function FeatureCards() {
           <div className="h-[200px] flex items-center justify-center mb-8">
             <Image
               src={feature.image}
-              alt={feature.title}
+              alt={feature.altText}
               width={180}
               height={180}
               className="object-contain"
