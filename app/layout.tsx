@@ -11,6 +11,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Taylor— make it! | Custom Websites",
   description: "Professional web design and development to help small businesses and entrepreneurs shine online.",
+  icons: {
+    icon: "/images/tmi favicon.png",
+  },
 };
 
 export default function RootLayout({
