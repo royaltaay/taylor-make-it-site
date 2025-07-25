@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FeatureCards } from "@/components/feature-cards";
 import { ServicesCard } from "@/components/services-card";
+import { FAQSection } from "@/components/faq-section";
 
 export default function Home() {
   return (
@@ -125,9 +126,6 @@ export default function Home() {
                 <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
                   Checkout →
                 </Button>
-                <Button variant="outline" className="rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5] h-auto">
-                  Contact me
-                </Button>
               </div>
             </Card>
 
@@ -163,6 +161,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Footer */}
       <footer className="py-12 px-8 border-t border-[#D5D5D5]">
