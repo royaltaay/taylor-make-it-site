@@ -24,7 +24,7 @@ export function ContactModal({ children }: ContactModalProps) {
         <DialogHeader>
           <DialogTitle className="text-2xl font-normal">Get in touch</DialogTitle>
           <DialogDescription className="text-xl text-gray-600">
-            Send me a message and I'll get back to you within 24 hours.
+            Send me a message and I&apos;ll get back to you within 24 hours.
           </DialogDescription>
         </DialogHeader>
         <ContactForm />
