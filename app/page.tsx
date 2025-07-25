@@ -113,10 +113,13 @@ export default function Home() {
               <h3 className="text-xl font-medium mb-2">Starter site</h3>
               <div className="text-4xl font-normal mb-6">$3,500</div>
               <ul className="space-y-3 text-xl text-gray-600 mb-8">
-                <li>• 5-page custom-coded site</li>
-                <li>• Basic SEO optimization</li>
+                <li>• 1–5 pages</li>
+                <li>• Mobile-responsive design</li>
+                <li>• Basic SEO setup</li>
+                <li>• Contact form integration</li>
                 <li>• 1-2 week delivery</li>
                 <li>• 2 rounds of revisions</li>
+                <li>• Launched on your domain</li>
               </ul>
               <div className="flex gap-3">
                 <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
@@ -130,18 +133,18 @@ export default function Home() {
 
             {/* Advanced Site Card */}
             <Card className="p-8 border-0 bg-gradient-to-br from-orange-100 via-purple-100 to-cyan-100 animate-gradient">
-              <h3 className="text-xl font-medium mb-2">Advanced site</h3>
-              <div className="text-4xl font-normal mb-6">$7,500</div>
+              <h3 className="text-xl font-medium mb-2">Growth site</h3>
+              <div className="text-4xl font-normal mb-6">$7,500+</div>
               <ul className="space-y-3 text-xl text-gray-700 mb-8">
-                <li>• 8-12 pages</li>
+                <li>• 8-12 custom pages</li>
+                <li>• Strategy session to define goals</li>
                 <li>• Custom features and integrations</li>
+                <li>• Enhanced SEO setup</li>
+                <li>• Priority support during build</li>
                 <li>• 2-4 week delivery</li>
                 <li>• 4 rounds of revisions</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
-                  Checkout →
-                </Button>
                 <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5] h-auto">
                   Contact me
                 </Button>
