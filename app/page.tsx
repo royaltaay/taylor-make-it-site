@@ -27,11 +27,11 @@ export default function Home() {
       <section className="pt-28 pb-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2rem] overflow-hidden px-16 py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200 animate-gradient">
-            <h1 className="text-[4.5rem] md:text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight">
+            <h1 className="text-[4.5rem] md:text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight opacity-0 animate-fade-up">
               Custom<br />
               websites
             </h1>
-            <p className="text-xl text-gray-800 mb-12 max-w-xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-800 mb-12 max-w-xl mx-auto leading-relaxed opacity-0 animate-fade-up animation-delay-200">
               Helping small businesses and entrepreneurs shine online with custom design and development.
             </p>
             <div className="flex items-center justify-center gap-3">
