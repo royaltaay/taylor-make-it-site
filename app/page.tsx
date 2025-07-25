@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { FeatureCards } from "@/components/feature-cards";
 import { ServicesCard } from "@/components/services-card";
 import { FAQSection } from "@/components/faq-section";
+import { ContactModal } from "@/components/contact-modal";
 
 export default function Home() {
   return (
@@ -13,9 +14,11 @@ export default function Home() {
         <nav className="max-w-7xl mx-auto flex items-center justify-between md:justify-between">
           <div className="text-xl font-medium mx-auto md:mx-0">Taylor— make it!</div>
           <div className="hidden md:flex items-center gap-4">
-            <button className="text-xl font-medium hover:opacity-70 transition-opacity">
-              Contact
-            </button>
+            <ContactModal>
+              <button className="text-xl font-medium hover:opacity-70 transition-opacity">
+                Contact
+              </button>
+            </ContactModal>
             <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-4 py-3 text-xl font-medium h-auto">
               See pricing
             </Button>
@@ -42,9 +45,11 @@ export default function Home() {
                 height={55}
                 className="rounded-full"
               />
-              <button className="text-xl font-medium hover:opacity-70 transition-opacity px-1">
-                Contact
-              </button>
+              <ContactModal>
+                <button className="text-xl font-medium hover:opacity-70 transition-opacity px-1">
+                  Contact
+                </button>
+              </ContactModal>
               <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-5 py-3 text-xl font-medium h-auto">
                 See pricing
               </Button>
@@ -156,9 +161,11 @@ export default function Home() {
                 <li>• 4 rounds of revisions</li>
               </ul>
               <div className="flex gap-3">
-                <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5] h-auto">
-                  Contact me
-                </Button>
+                <ContactModal>
+                  <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5] h-auto">
+                    Contact me
+                  </Button>
+                </ContactModal>
               </div>
             </Card>
           </div>
