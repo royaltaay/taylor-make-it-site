@@ -4,22 +4,23 @@ import { NextResponse } from 'next/server';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-  const { name, email, message } = await req.json();
+  const { name, email, message, plan } = await req.json();
 
   try {
     await resend.emails.send({
       from: 'Taylor Make It <onboarding@resend.dev>',
       to: [process.env.CONTACT_EMAIL || 'tprince09@gmail.com'],
-      subject: `New contact form submission from ${name}`,
+      subject: `New contact form submission from ${name}${plan ? ` - ${plan}` : ''}`,
       replyTo: email,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        ${plan ? `<p><strong>Selected Plan:</strong> ${plan}</p>` : ''}
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
-      text: `New Contact Form Submission\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      text: `New Contact Form Submission\n\nName: ${name}\nEmail: ${email}\n${plan ? `Selected Plan: ${plan}\n` : ''}\nMessage:\n${message}`,
     });
 
     return NextResponse.json({ success: true });

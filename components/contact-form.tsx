@@ -3,7 +3,12 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
-export function ContactForm() {
+interface ContactFormProps {
+  plan?: string;
+  onSuccess?: () => void;
+}
+
+export function ContactForm({ plan, onSuccess }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -13,6 +18,11 @@ export function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+
+    // Add the plan to the data if provided
+    if (plan) {
+      data.plan = plan;
+    }
 
     try {
       const res = await fetch('/api/contact', {
@@ -24,7 +34,10 @@ export function ContactForm() {
       if (res.ok) {
         setStatus('sent');
         form.reset();
-        setTimeout(() => setStatus('idle'), 3000);
+        setTimeout(() => {
+          setStatus('idle');
+          onSuccess?.();
+        }, 2000);
       } else {
         setStatus('error');
       }

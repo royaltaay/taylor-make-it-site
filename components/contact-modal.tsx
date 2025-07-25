@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -12,11 +13,14 @@ import { ContactForm } from "@/components/contact-form";
 
 interface ContactModalProps {
   children: React.ReactNode;
+  plan?: string;
 }
 
-export function ContactModal({ children }: ContactModalProps) {
+export function ContactModal({ children, plan }: ContactModalProps) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
@@ -27,7 +31,7 @@ export function ContactModal({ children }: ContactModalProps) {
             Send me a message and I&apos;ll get back to you within 24 hours.
           </DialogDescription>
         </DialogHeader>
-        <ContactForm />
+        <ContactForm plan={plan} onSuccess={() => setOpen(false)} />
       </DialogContent>
     </Dialog>
   );

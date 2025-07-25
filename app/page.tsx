@@ -145,7 +145,7 @@ export default function Home() {
                 <li>• Launched on your domain</li>
               </ul>
               <div className="flex gap-3">
-                <ContactModal>
+                <ContactModal plan="Starter Site - $3,500">
                   <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
                     Contact me
                   </Button>
@@ -167,7 +167,7 @@ export default function Home() {
                 <li>• 4 rounds of revisions</li>
               </ul>
               <div className="flex gap-3">
-                <ContactModal>
+                <ContactModal plan="Growth Site - $7,500+">
                   <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
                     Contact me
                   </Button>
