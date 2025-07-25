@@ -19,9 +19,11 @@ export default function Home() {
                 Contact
               </button>
             </ContactModal>
-            <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-4 py-3 text-xl font-medium h-auto">
-              See pricing
-            </Button>
+            <a href="#pricing">
+              <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-4 py-3 text-xl font-medium h-auto">
+                See pricing
+              </Button>
+            </a>
           </div>
         </nav>
       </header>
@@ -50,9 +52,11 @@ export default function Home() {
                   Contact
                 </button>
               </ContactModal>
-              <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-5 py-3 text-xl font-medium h-auto">
-                See pricing
-              </Button>
+              <a href="#pricing">
+                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-5 py-3 text-xl font-medium h-auto">
+                  See pricing
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -121,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-8">
+      <section id="pricing" className="py-20 px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-normal text-center mb-2">Simple Pricing,</h2>
           <h2 className="text-5xl font-normal text-center mb-16">unlimited potential</h2>
@@ -141,9 +145,11 @@ export default function Home() {
                 <li>• Launched on your domain</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
-                  Checkout →
-                </Button>
+                <ContactModal>
+                  <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
+                    Contact me
+                  </Button>
+                </ContactModal>
               </div>
             </Card>
 
@@ -162,7 +168,7 @@ export default function Home() {
               </ul>
               <div className="flex gap-3">
                 <ContactModal>
-                  <Button variant="outline" className="bg-white/50 rounded-lg px-6 py-3 text-xl font-medium border-[#D5D5D5] h-auto">
+                  <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
                     Contact me
                   </Button>
                 </ContactModal>
