@@ -32,8 +32,7 @@ export default function Home() {
               websites
             </h1>
             <p className="text-xl text-gray-800 mb-12 max-w-xl mx-auto leading-relaxed">
-              Professional web design and development to help small
-              businesses and entrepreneurs shine online.
+              Helping small businesses and entrepreneurs shine online with custom design and development.
             </p>
             <div className="flex items-center justify-center gap-3">
               <Image
@@ -85,15 +84,29 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left card with image placeholder */}
             <div className="bg-white rounded-2xl border border-[#D5D5D5] p-8">
-              <div className="bg-gray-100 rounded-xl h-80 mb-8"></div>
+              <div className="rounded-xl overflow-hidden mb-8">
+                <Image
+                  src="/images/recentwork-2.webp"
+                  alt="Recent work showcase"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
               <h2 className="text-3xl font-normal mb-3">Recent projects</h2>
               <p className="text-gray-600 text-xl mb-6">
                 My custom-coded websites drive results. Each
                 is built to fit your needs, ready in 1-3 weeks.
               </p>
-              <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
-                See recent projects
-              </Button>
+              <a 
+                href="https://www.figma.com/proto/3RJE50tGInmIphy30kI3Lp/Taylor-Make-It---Recent-Work?page-id=0%3A1&node-id=6-292&viewport=268%2C445%2C0.17&t=gzxSCGl4SpozxBwH-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=6%3A292"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-6 py-3 text-xl font-medium h-auto">
+                  See recent projects
+                </Button>
+              </a>
             </div>
 
             {/* Right card with list */}
