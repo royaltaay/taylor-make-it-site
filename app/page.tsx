@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FeatureCards } from "@/components/feature-cards";
@@ -13,7 +14,7 @@ export default function Home() {
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 px-8 py-6">
         <nav className="max-w-7xl mx-auto flex items-center justify-between md:justify-between">
           <h1 className="text-xl font-medium mx-auto md:mx-0">
-            <a href="/" className="hover:opacity-70 transition-opacity">Taylor— make it!</a>
+            <Link href="/" className="hover:opacity-70 transition-opacity">Taylor— make it!</Link>
           </h1>
           <div className="hidden md:flex items-center gap-4">
             <ContactModal>
