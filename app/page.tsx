@@ -32,31 +32,33 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-28 pb-16 px-8">
+      <section className="pt-28 pb-16 px-4 sm:px-6 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[2rem] overflow-hidden px-16 py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200 animate-gradient">
-            <h2 className="text-[4.5rem] md:text-[5.5rem] leading-[0.9] font-normal mb-8 tracking-tight opacity-0 animate-fade-up">
+          <div className="relative rounded-[2rem] overflow-hidden px-8 sm:px-12 md:px-16 py-12 sm:py-16 md:py-20 text-center bg-gradient-to-r from-pink-200 via-yellow-100 via-purple-200 via-blue-200 to-cyan-200 animate-gradient">
+            <h2 className="text-[3rem] sm:text-[4rem] md:text-[5.5rem] leading-[0.9] font-normal mb-6 sm:mb-8 tracking-tight opacity-0 animate-fade-up">
               Custom<br />
               websites
             </h2>
-            <p className="text-xl text-gray-800 mb-12 max-w-xl mx-auto leading-relaxed opacity-0 animate-fade-up animation-delay-200">
+            <p className="text-lg sm:text-xl text-gray-800 mb-8 sm:mb-12 max-w-xl mx-auto leading-relaxed opacity-0 animate-fade-up animation-delay-200 px-4 sm:px-0">
               Helping small businesses and entrepreneurs shine online with custom design and development.
             </p>
-            <div className="flex items-center justify-center gap-3">
-              <Image
-                src="/images/profile pic.png.webp"
-                alt="Taylor Prince - Web Designer and Developer"
-                width={55}
-                height={55}
-                className="rounded-full"
-              />
-              <ContactModal>
-                <button className="text-xl font-medium hover:opacity-70 transition-opacity px-1">
-                  Contact
-                </button>
-              </ContactModal>
-              <a href="#pricing">
-                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-5 py-3 text-xl font-medium h-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/profile pic.png.webp"
+                  alt="Taylor Prince - Web Designer and Developer"
+                  width={55}
+                  height={55}
+                  className="rounded-full"
+                />
+                <ContactModal>
+                  <button className="text-lg sm:text-xl font-medium hover:opacity-70 transition-opacity">
+                    Contact
+                  </button>
+                </ContactModal>
+              </div>
+              <a href="#pricing" className="w-full sm:w-auto">
+                <Button className="bg-black text-white hover:bg-black/90 rounded-lg px-5 py-3 text-lg sm:text-xl font-medium h-auto w-full sm:w-auto">
                   See pricing
                 </Button>
               </a>
