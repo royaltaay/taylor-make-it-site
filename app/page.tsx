@@ -185,8 +185,7 @@ export default function Home() {
           <div className="mt-12 max-w-md mx-auto text-center">
             <h3 className="text-xl font-medium mb-2">Maintenance plan</h3>
             <p className="text-xl text-gray-600 mb-2">
-              Monthly updates & support, SEO tweaks<br />
-              & backups, Priority response.
+              Monthly updates & support, SEO tweaks & backups, Priority response.
             </p>
             <div className="text-2xl font-normal">$200/mo</div>
           </div>
